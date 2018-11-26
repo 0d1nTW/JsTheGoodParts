@@ -1,0 +1,23 @@
+{
+  "name": "jsthegoodparts",
+  "version": "1.0.0",
+  "description": "Learning JS and some JS testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter progress \"js/**/*.test.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0d1nTW/JsTheGoodParts.git"
+  },
+  "author": "0d1n",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  },
+  "bugs": {
+    "url": "https://github.com/0d1nTW/JsTheGoodParts/issues"
+  },
+  "homepage": "https://github.com/0d1nTW/JsTheGoodParts#readme"
+}
