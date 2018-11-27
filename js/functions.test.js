@@ -1,4 +1,5 @@
 var expect = require('chai').expect;
+const functions = require('./functions')
 
 describe('Our first test', ()=> {
     it('should pass', ()=> {
@@ -6,17 +7,17 @@ describe('Our first test', ()=> {
     })
 })
 
-describe('Arithmetical operations test', ()=> {
+describe('Arithmetical operations test', ()=> {    
     it('Add function test', ()=> {
-        expect(add(3,4)).to.equal(7);
+        expect(functions.add(3,4)).to.equal(7);
     })
 
     it('Subtract function test', ()=> {
-        expect(sub(3,4)).to.equal(-1);
+        expect(functions.sub(3,4)).to.equal(-1);
     })
 
     it('Subtract function test', ()=> {
-        expect(mul(3,4)).to.equal(12);
+        expect(functions.mul(3,4)).to.equal(12);
     })
 })
 

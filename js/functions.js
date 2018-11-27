@@ -1,22 +1,20 @@
-function log(arg) {
-    document.writeln(arg);
-}
-
-function identity(x) {
+'use strict'
+module.exports = {
+log:function(arg) {
+    console.log(arg);
+},
+identity : function(x) {
     return x;
-}
-
-log(add(3, 4));
-
-function add(nr1, nr2){
+},
+add : function(nr1, nr2){
     return nr1 + nr2;
-}
+},
 
-function sub(nr1, nr2){
+sub : function(nr1, nr2){
     return nr1 - nr2;
-}
-
-function mul(nr1, nr2){
+},
+mul: function(nr1, nr2){
     return nr1 * nr2;
 }
 
+};

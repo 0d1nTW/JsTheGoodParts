@@ -2,7 +2,7 @@
   "name": "jsthegoodparts",
   "version": "1.0.0",
   "description": "Learning JS and some JS testing",
-  "main": "index.js",
+  "main": "./js/functions.js",
   "scripts": {
     "test": "mocha --reporter progress \"js/**/*.test.js\""
   },
