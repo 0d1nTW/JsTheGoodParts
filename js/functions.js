@@ -21,12 +21,32 @@ var square = function (nr1) {
     return mul(nr1, nr1);
 };
 
+var identityf = function (x) {
+    return function () {
+        return x;
+    };
+};
+var addf = function (nr1) {
+    return function (nr2) {
+        return add(nr1, nr2);
+    };
+};
+
+var liftf = function (binary) {
+    return function (nr1) {
+        return function (nr2) {
+            return binary(nr1, nr2);
+        }
+    }
+};
+
 
 module.exports = {
-    log: log,
-    identity: identity,
     add: add,
     sub: sub,
     mul: mul,
-    square: square
+    square: square,
+    identityf: identityf,
+    addf: addf,
+    liftf: liftf
 };

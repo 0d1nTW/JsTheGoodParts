@@ -1,3 +1,4 @@
+'use strict'
 var expect = require('chai').expect;
 const functions = require('./functions')
 
@@ -25,4 +26,27 @@ describe('Arithmetical operations test', () => {
     })
 })
 
+describe('Function challenge 1 tests', () => {
+    it('identityf() function - returns a function that returns its argument', () => {
+        var three = functions.identityf(3);
+        var val = three();
+        expect(val).to.equal(3);
+    });
+
+    it('addf() function - adds from 2 invocations ', () => {
+        //fct(3)(4) = 7;
+        var val = functions.addf(3)(4);
+        expect(val).to.equal(7);
+    });
+
+    it('liftf() takes a binary fct and makes it callable with two invocations', () => {
+        var addf = functions.liftf(functions.add);
+        var adunare = addf(3)(4);
+
+        var inmultire = functions.liftf(functions.mul)(5)(6);
+
+        expect(adunare).to.equal(7);
+        expect(inmultire).to.equal(30);
+    });
+});
 
