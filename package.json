@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/0d1nTW/JsTheGoodParts/issues"
   },
-  "homepage": "https://github.com/0d1nTW/JsTheGoodParts#readme"
+  "homepage": "https://github.com/0d1nTW/JsTheGoodParts#readme",
+  "dependencies": {
+    "eslint-watch": "^4.0.2"
+  }
 }
