@@ -1,5 +1,5 @@
 'use strict'
-
+//all functions in challenge 1, 2, 3
 var log = function (arg) {
   console.log(arg);
 };
