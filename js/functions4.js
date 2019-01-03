@@ -1,38 +1,38 @@
 'use strict'
 
-var from = function (startingNumber) {
-  return function () {
-    var next = startingNumber;
+const from = function from(startingNumber) {
+  return function fromGen() {
+    const next = startingNumber;
     startingNumber += 1;
     return next;
   };
 };
 
-var to = function (generatorFunc, upperLimit) {
-  return function () {
-    var startingNumber = generatorFunc();
+const to = function to(generatorFunc, upperLimit) {
+  return function toGen() {
+    const startingNumber = generatorFunc();
     if (startingNumber < upperLimit) {
       return startingNumber;
-    };
+    }
     return undefined;
   };
 };
 
-var fromTo = function (start, end) {
+const fromTo = function fromTo(start, end) {
   return to(
     from(start),
     end
   );
 };
 
-var element = function (arr, generatorFunc) {
+const element = function element(arr, generatorFunc) {
   if (generatorFunc === undefined) {
     generatorFunc = fromTo(0, arr.length);
   }
-  return function () {
-    var _index = generatorFunc();
-    if (_index !== undefined) {
-      return arr[_index];
+  return function elementGenerator() {
+    const index = generatorFunc();
+    if (index !== undefined) {
+      return arr[index];
     }
     return undefined;
   };
@@ -40,8 +40,8 @@ var element = function (arr, generatorFunc) {
 
 
 module.exports = {
-  from: from,
-  to: to,
-  fromTo: fromTo,
-  element: element
+  from,
+  to,
+  fromTo,
+  element,
 };

@@ -1,13 +1,11 @@
 'use strict'
 const fct4 = require('./functions4');
 
-var from = fct4.from;
-var to = fct4.to;
-var fromTo = fct4.fromTo;
+const fromTo = fct4.fromTo;
 
-var collect = function (generatorFunc, arr) {
-  return function () {
-    var index = generatorFunc();
+const collect = function collect(generatorFunc, arr) {
+  return function collectReturn() {
+    const index = generatorFunc();
     if (index !== undefined) {
       arr.push(index);
     }
@@ -15,9 +13,9 @@ var collect = function (generatorFunc, arr) {
   };
 };
 
-var filter = function (generatorFunc, predFunc) {
-  return function () {
-    var value;
+const filter = function filter(generatorFunc, predFunc) {
+  return function filterGen() {
+    let value;
     do {
       value = generatorFunc();
     } while (value !== undefined && !predFunc(value));
@@ -25,23 +23,22 @@ var filter = function (generatorFunc, predFunc) {
   };
 };
 
-var concat = function (generatorFunc1, generatorFunc2) {
-  return function () {
-    var value = generatorFunc1();
+const concat = function concat(generatorFunc1, generatorFunc2) {
+  return function concatGen() {
+    let value = generatorFunc1();
     if (value !== undefined) {
       return value;
     }
     value = generatorFunc2();
     return value;
-  }
+  };
 };
 
-var concatMany = function (...gens) {
-  var next = fct4.element(gens),
-    gen = next();
-
+const concatMany = function concatMany(...gens) {
+  const next = fct4.element(gens);
+  let gen = next();
   return function recur() {
-    var value = gen();
+    const value = gen();
     if (value === undefined) {
       gen = next();
       if (gen !== undefined) {
@@ -52,11 +49,10 @@ var concatMany = function (...gens) {
   };
 };
 
-
 module.exports = {
-  fromTo: fromTo,
-  collect: collect,
-  filter: filter,
-  concat: concat,
-  concatMany: concatMany
+  fromTo,
+  collect,
+  filter,
+  concat,
+  concatMany,
 };
