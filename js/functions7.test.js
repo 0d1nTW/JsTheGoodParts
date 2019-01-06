@@ -19,6 +19,7 @@ describe('Function Challenge 7 tests', () => {
     const addRev = rev.invoke;
     expect(addRev(3, 4), '3 plus 4 eq 7').to.equal(7);
     rev.revoke();
+    // eslint-disable-next-line no-unused-expressions
     expect(addRev(5, 7), 'adding is revoked => undefined').to.be.undefined;
   });
 });
