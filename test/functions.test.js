@@ -1,6 +1,6 @@
 'use strict'
 var expect = require('chai').expect;
-const functions = require('./functions')
+const functions = require('../js/functions')
 
 describe('Our first test', () => {
   it('should pass', () => {

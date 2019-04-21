@@ -1,8 +1,8 @@
 'use strict'
 
 const expect = require('chai').expect;
-const functions = require('./functions6');
-const functions1to3 = require('./functions');
+const functions = require('../js/functions6');
+const functions1to3 = require('../js/functions');
 
 describe('Function Challenge 6 tests', () => {
   it('gensymf() is a factory that makes a function that generates unique symbols', () => {

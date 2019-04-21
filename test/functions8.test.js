@@ -1,6 +1,6 @@
 const expect = require('chai').expect;
-const functions = require('./functions8');
-const fct13 = require('./functions');
+const functions = require('../js/functions8');
+const fct13 = require('../js/functions');
 
 describe('Function Challenge 8 tests', () => {
   it('m() takes a value and an optional source string and returns them as an object', () => {

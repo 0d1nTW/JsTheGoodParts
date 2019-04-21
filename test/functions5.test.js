@@ -1,7 +1,7 @@
 'use strict'
 
 var expect = require('chai').expect;
-const functions = require('./functions5');
+const functions = require('../js/functions5');
 
 describe('Function Challenge 5 tests', () => {
   it('collect() function takes a generator and an array and produces a function that will collect the results in the array', () => {

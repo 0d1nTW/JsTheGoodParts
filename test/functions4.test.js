@@ -1,7 +1,7 @@
 'use strict'
 
 const expect = require('chai').expect;
-const functions = require('./functions4');
+const functions = require('../js/functions4');
 
 describe('Function Challenge 4 tests', () => {
   it('from() function produces a generator that will produce a series of values', () => {

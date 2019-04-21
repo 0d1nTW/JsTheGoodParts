@@ -1,6 +1,6 @@
 const expect = require('chai').expect;
-const functions = require('./functions7');
-const fct13 = require('./functions');
+const functions = require('../js/functions7');
+const fct13 = require('../js/functions');
 
 describe('Function Challenge 7 tests', () => {
   it('counter(nr) function that returns an object containing two functions that implement an up/down counter, hiding the counter', () => {
